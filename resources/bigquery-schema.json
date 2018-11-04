@@ -1,0 +1,103 @@
+[
+    {"type":"STRING","name":"User"},
+    {"type":"INTEGER","name":"Device"},
+    {"type":"TIMESTAMP","name":"Timestamp"},
+    {
+      "name": "data",
+      "type": "RECORD",
+      "mode": "REQUIRED",
+      "fields": [
+        {
+          "name": "speeds",
+          "type": "RECORD",
+          "fields": [
+            {
+              "name": "download",
+              "type": "NUMERIC",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "upload",
+              "type": "NUMERIC",
+              "mode": "NULLABLE"
+            }
+          ],
+          "mode": "NULLABLE"
+        },
+        {
+          "name": "client",
+          "type": "RECORD",
+          "fields": [
+            {
+              "name": "ip",
+              "type": "STRING",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "latitude",
+              "type": "NUMERIC",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "longitude",
+              "type": "NUMERIC",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "isp",
+              "type": "STRING",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "country",
+              "type": "STRING",
+              "mode": "NULLABLE"
+            }
+          ],
+          "mode": "NULLABLE"
+        },
+        {
+          "name": "server",
+          "type": "RECORD",
+          "fields": [
+            {
+              "name": "host",
+              "type": "STRING",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "latitude",
+              "type": "NUMERIC",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "longitude",
+              "type": "NUMERIC",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "country",
+              "type": "STRING",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "distance",
+              "type": "NUMERIC",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "ping",
+              "type": "NUMERIC",
+              "mode": "NULLABLE"
+            },
+            {
+              "name": "id",
+              "type": "STRING",
+              "mode": "NULLABLE"
+            }
+          ],
+          "mode": "NULLABLE"
+        }
+      ]
+    }
+  ]
